@@ -14,4 +14,5 @@ shape = SubResource("CapsuleShape3D_l1vy1")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1999806737]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7326912, 0)
 current = true
+fov = 90.0
 script = ExtResource("2_kpjcp")
