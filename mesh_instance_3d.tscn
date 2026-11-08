@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://ejw7lyl7w8of"]
+
+[ext_resource type="Texture2D" uid="uid://dwc6a65rce7xs" path="res://Textures/Lava005_2K-JPG_Color.jpg" id="1_etjlb"]
+[ext_resource type="Texture2D" uid="uid://c4i14yun86s0s" path="res://Textures/Grass005_2K-JPG_Color.jpg" id="2_gw35f"]
+[ext_resource type="Script" uid="uid://cqbqr5p4efkn4" path="res://mesh_instance_3d.gd" id="3_hbm4x"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tdg3f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dtqjt"]
+albedo_texture = ExtResource("1_etjlb")
+metallic_specular = 0.0
+emission_enabled = true
+emission = Color(0.513235, 0, 0.139423, 1)
+emission_energy_multiplier = 1.4
+ao_enabled = true
+ao_light_affect = 1.0
+ao_on_uv2 = true
+heightmap_enabled = true
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 1.0
+subsurf_scatter_skin_mode = true
+backlight = Color(1, 1, 1, 1)
+backlight_texture = ExtResource("2_gw35f")
+uv1_scale = Vector3(100, 100, 100)
+grow_amount = -1.21
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+transform = Transform3D(131.099, 0, 0, 0, 4.696, 0, 0, 0, 72.355, 0, 0, 0)
+mesh = SubResource("PlaneMesh_tdg3f")
+surface_material_override/0 = SubResource("StandardMaterial3D_dtqjt")
+script = ExtResource("3_hbm4x")

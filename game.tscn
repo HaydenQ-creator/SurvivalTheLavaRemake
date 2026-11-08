@@ -1,0 +1,84 @@
+[gd_scene load_steps=0 format=3 uid="uid://c1v3hgld4dgpl"]
+
+[ext_resource type="PackedScene" uid="uid://cuvuok6wduokb" path="res://BedRoom/Floor.glb" id="1_vef74"]
+[ext_resource type="PackedScene" uid="uid://b78bdwy3l0clt" path="res://BedRoom/Hall.glb" id="2_hve3p"]
+[ext_resource type="PackedScene" uid="uid://tx1ydp1fd05h" path="res://BedRoom/Back_Walls.glb" id="3_mfdv2"]
+[ext_resource type="PackedScene" uid="uid://cl71brkqolm3y" path="res://Bed/bed.glb" id="4_iotsf"]
+[ext_resource type="PackedScene" uid="uid://e2gtid6c4un" path="res://BedRoom/SideWalls.glb" id="5_lc2xo"]
+[ext_resource type="PackedScene" uid="uid://v355tes3kxgm" path="res://BedRoom/doorFrame.glb" id="6_215e1"]
+[ext_resource type="PackedScene" uid="uid://ck7a6wbnwka2q" path="res://BedRoom/door.glb" id="7_7sc4i"]
+[ext_resource type="Texture2D" uid="uid://c6rfxxsf8hdl2" path="res://Textures/WoodFloor041_2K-JPG_Color.jpg" id="8_80cx4"]
+[ext_resource type="Texture2D" uid="uid://dqonphibu0fes" path="res://Textures/Fabric063_2K-JPG_Color.jpg" id="9_e8heu"]
+
+[sub_resource type="Gradient" id="Gradient_rvswv"]
+colors = PackedColorArray(0.16086122, 0.13459647, 0.5091749, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_boyg6"]
+gradient = SubResource("Gradient_rvswv")
+fill_from = Vector2(0.9484536, 0.6185567)
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_e36ub"]
+night_sky = SubResource("GradientTexture2D_boyg6")
+
+[sub_resource type="Sky" id="Sky_hb5m1"]
+sky_material = SubResource("PhysicalSkyMaterial_e36ub")
+
+[sub_resource type="Environment" id="Environment_x5p1p"]
+background_mode = 2
+sky = SubResource("Sky_hb5m1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhcbd"]
+albedo_texture = ExtResource("8_80cx4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1jbl"]
+albedo_texture = ExtResource("9_e8heu")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vaj68"]
+material = SubResource("StandardMaterial3D_f1jbl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2p71"]
+albedo_texture = ExtResource("9_e8heu")
+
+[node name="Node3D" type="Node3D" unique_id=434267020]
+
+[node name="Floor" parent="." unique_id=258467419 instance=ExtResource("1_vef74")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1635041, -12.269234, 0, -34.338314)
+
+[node name="Hall" parent="." unique_id=1688749899 instance=ExtResource("2_hve3p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0228195, 0, -34.339294)
+
+[node name="Back_Walls" parent="." unique_id=1595158944 instance=ExtResource("3_mfdv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.967522, 0, -34.422256)
+
+[node name="Sketchfab_Scene" parent="." unique_id=620822969 instance=ExtResource("4_iotsf")]
+transform = Transform3D(8.823873, 0, 0, 0, 5.508075, 0, 0, 0, 8.137255, -25.283936, 0, -34.73603)
+
+[node name="SideWalls" parent="." unique_id=1610447957 instance=ExtResource("5_lc2xo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3004265, -0.030122757, -33.728302)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=453953611]
+environment = SubResource("Environment_x5p1p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment" unique_id=1257719452]
+transform = Transform3D(0.56222755, -0.60384995, 0.56503594, -0.25848737, 0.52069837, 0.81366915, -0.7855474, -0.6035218, 0.13666333, 34.56414, 0, -41.04235)
+
+[node name="doorFrame" parent="." unique_id=1106145112 instance=ExtResource("6_215e1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4246864, 0, -34.442574)
+
+[node name="door" parent="." unique_id=2001427813 instance=ExtResource("7_7sc4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4912329, 0, -25.40934)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2035228414]
+transform = Transform3D(-0.062151816, 0, 20.225172, 0, 5.0385685, 0, -14.1308775, 0, -0.08895633, -17.862467, 0.4920622, -33.287514)
+material_override = SubResource("StandardMaterial3D_qhcbd")
+mesh = SubResource("PlaneMesh_vaj68")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=353140269]
+transform = Transform3D(1.7907724e-09, -0.026381591, 20.22509, -7.8244166, -2.2024282e-07, 0, 3.4201142e-07, -5.0384994, -0.105898604, -17.862467, 8.316545, -20.409725)
+material_override = SubResource("StandardMaterial3D_i2p71")
+mesh = SubResource("PlaneMesh_vaj68")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=718529386]
+transform = Transform3D(1.7907724e-09, 0.02638159, 20.225088, 7.8244166, -2.202428e-07, 0, 3.4201142e-07, 5.038499, -0.1058986, -17.862467, 8.316545, -47.07869)
+material_override = SubResource("StandardMaterial3D_i2p71")
+mesh = SubResource("PlaneMesh_vaj68")
