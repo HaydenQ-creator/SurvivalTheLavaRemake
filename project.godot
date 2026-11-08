@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="Platformer Project"
+run/main_scene="uid://d2l2q1r4wk3y5"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="uid://c40s4pm32iqjq"
+
+[dotnet]
+
+project/assembly_name="Platformer Project"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "green",
+"res://scenes/": "yellow",
+"res://scripts/": "purple"
+}
+
+[filesystem]
+
+import/blender/enabled=false
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
