@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cqosisykpgffu"]
+
+[ext_resource type="PackedScene" uid="uid://qrw4yl2ck3ss" path="res://3D/house/House.glb" id="1_6syyc"]
+[ext_resource type="Texture2D" uid="uid://c6rfxxsf8hdl2" path="res://3D/Textures/WoodFloor041_2K-JPG_Color.jpg" id="2_o1325"]
+[ext_resource type="Texture2D" uid="uid://dg6cdk7kpjj0f" path="res://3D/Textures/Pictures/Concrete030_4K-JPG_Color.jpg" id="3_vy7fe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10qhy"]
+albedo_texture = ExtResource("2_o1325")
+uv1_scale = Vector3(10000, 10000, 10000)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2y50f"]
+albedo_texture = ExtResource("3_vy7fe")
+uv1_scale = Vector3(33.549, 147.12, 161.829)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obbqb"]
+albedo_texture = ExtResource("3_vy7fe")
+uv1_scale = Vector3(146.775, 146.775, 146.775)
+
+[node name="House" unique_id=1782824997 instance=ExtResource("1_6syyc")]
+
+[node name="Cube" parent="." index="0" unique_id=666801214]
+transform = Transform3D(231.31877, 0, 0, 0, 0.16963314, 0, 0, 0, 162.44188, -83.641075, 4.372526, 5.116661)
+surface_material_override/0 = SubResource("StandardMaterial3D_10qhy")
+
+[node name="Cube_001" parent="." index="1" unique_id=93157550]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_002" parent="." index="2" unique_id=758207336]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_003" parent="." index="3" unique_id=419312746]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_004" parent="." index="4" unique_id=178126593]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_005" parent="." index="5" unique_id=1106865783]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_006" parent="." index="6" unique_id=4576386]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_007" parent="." index="7" unique_id=933814443]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_008" parent="." index="8" unique_id=1887157000]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_009" parent="." index="9" unique_id=1522845397]
+transform = Transform3D(0.5312135, 0, 0, 0, 0.64055353, 0, 0, 0, 0.5279494, -146.01505, 28.073254, -106.011734)
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_010" parent="." index="10" unique_id=1319501197]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_011" parent="." index="11" unique_id=1611128093]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_012" parent="." index="12" unique_id=82490864]
+transform = Transform3D(0, 0, -0.5312135, 0, 0.6405535, 0, 1.6009728, 0, 0, -286.10324, 28.073254, 69.89531)
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_013" parent="." index="13" unique_id=1119353946]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_014" parent="." index="14" unique_id=565294427]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_015" parent="." index="15" unique_id=1742494541]
+surface_material_override/0 = SubResource("StandardMaterial3D_obbqb")
+
+[node name="Cube_016" parent="." index="16" unique_id=1382679272]
+transform = Transform3D(0, 0, 0.4456395, 0, 0.64055353, 0, -0.57063305, 0, 0, -228.9334, 28.073254, 42.877785)
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_017" parent="." index="17" unique_id=1780225760]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
+
+[node name="Cube_019" parent="." index="19" unique_id=589107741]
+surface_material_override/0 = SubResource("StandardMaterial3D_2y50f")
