@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://drwjhv62i44xk"]
+
+[ext_resource type="PackedScene" uid="uid://c07hndmculcrf" path="res://Tasklist Only/largeFlatPlane.glb" id="1_hme1c"]
+[ext_resource type="Texture2D" uid="uid://c4i14yun86s0s" path="res://Textures/Grass005_2K-JPG_Color.jpg" id="2_42b4g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kww3b"]
+albedo_texture = ExtResource("2_42b4g")
+uv1_scale = Vector3(100, 100, 100)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lux62"]
+data = PackedVector3Array(1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1)
+
+[node name="largeFlatPlane" instance=ExtResource("1_hme1c")]
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(115.662, 0, 0, 0, 0.539316, 0, 0, 0, 106.864, 0, 0, 1.34042)
+surface_material_override/0 = SubResource("StandardMaterial3D_kww3b")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_lux62")
