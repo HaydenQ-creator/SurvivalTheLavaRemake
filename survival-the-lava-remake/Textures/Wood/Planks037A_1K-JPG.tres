@@ -1,0 +1,29 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://biwxq2k5guma3"]
+
+[ext_resource type="Texture2D" uid="uid://bxfg5dr5jdry1" path="res://Textures/Wood/Planks037A_1K-JPG_AmbientOcclusion.jpg" id="AmbientOcclusion"]
+[ext_resource type="Texture2D" uid="uid://baxh4ofyudvat" path="res://Textures/Wood/Planks037A_1K-JPG_Color.jpg" id="Color"]
+[ext_resource type="Texture2D" uid="uid://c6ewrhkkxkedq" path="res://Textures/Wood/Planks037A_1K-JPG_Displacement.jpg" id="Displacement"]
+[ext_resource type="Texture2D" uid="uid://byhvfp77ds4kd" path="res://Textures/Wood/Planks037A_1K-JPG_Metalness.jpg" id="Metalness"]
+[ext_resource type="Texture2D" uid="uid://kpvayscvji8" path="res://Textures/Wood/Planks037A_1K-JPG_NormalGL.jpg" id="NormalGL"]
+[ext_resource type="Texture2D" uid="uid://c3wrwdpnbgads" path="res://Textures/Wood/Planks037A_1K-JPG_Roughness.jpg" id="Roughness"]
+
+[resource]
+albedo_texture = ExtResource("Color")
+metallic = 1.0
+metallic_specular = 0.3
+metallic_texture = ExtResource("Metalness")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("Roughness")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_scale = 2.76
+normal_texture = ExtResource("NormalGL")
+ao_enabled = true
+ao_texture = ExtResource("AmbientOcclusion")
+ao_texture_channel = 4
+heightmap_enabled = true
+heightmap_scale = 16.0
+heightmap_deep_parallax = true
+heightmap_min_layers = 8
+heightmap_max_layers = 32
+heightmap_texture = ExtResource("Displacement")
