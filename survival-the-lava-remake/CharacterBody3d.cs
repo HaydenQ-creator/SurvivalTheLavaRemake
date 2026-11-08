@@ -3,7 +3,7 @@ using Godot;
 public partial class CharacterBody3d : CharacterBody3D
 {
 	[Export] public float Speed = 7.0f;
-	[Export] public float SprintSpeed = 10.0f;
+	[Export] public float SprintSpeed = 12.0f;
 	[Export] public float Acceleration = 10.0f; // Controls how fast you reach max speed
 	[Export] public float Deceleration = 12.0f; // Controls how fast you slide to a stop
 	[Export] public float Jump = 8.0f; 
