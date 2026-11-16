@@ -19,7 +19,7 @@ public partial class CharacterBody3d : CharacterBody3D
 	{
 		Vector3 velocity = Velocity;
 
-		// Apply gravity if airborne
+
 		if (!IsOnFloor())
 		{
 			velocity += GetGravity() * (float)delta;
@@ -37,26 +37,25 @@ public partial class CharacterBody3d : CharacterBody3D
 			Speed = 7.0f;
 		}
 
-		// Get input vector (WASD configuration)
+
 		Vector2 inputDir = Input.GetVector("a", "d", "w", "s");
 
-		// Calculate direction based on camera orientation
 		Basis camBasis = _camera.GlobalTransform.Basis;
 		Vector3 forward = new Vector3(camBasis.Z.X, 0.0f, camBasis.Z.Z).Normalized();
 		Vector3 right = new Vector3(camBasis.X.X, 0.0f, camBasis.X.Z).Normalized();
 
 		Vector3 direction = (forward * inputDir.Y + right * inputDir.X).Normalized();
 
-		// Smoothly interpolate the horizontal velocity
+
 		if (direction != Vector3.Zero)
 		{
-			// Accelerate toward target direction
+
 			velocity.X = Mathf.Lerp(velocity.X, direction.X * Speed, (float)delta * Acceleration);
 			velocity.Z = Mathf.Lerp(velocity.Z, direction.Z * Speed, (float)delta * Acceleration);
 		}
 		else
 		{
-			// Decelerate smoothly to a stop
+
 			velocity.X = Mathf.Lerp(velocity.X, 0.0f, (float)delta * Deceleration);
 			velocity.Z = Mathf.Lerp(velocity.Z, 0.0f, (float)delta * Deceleration);
 		}
