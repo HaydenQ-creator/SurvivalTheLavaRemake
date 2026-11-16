@@ -62,6 +62,7 @@ public partial class Camera3d : Camera3D
 	}
 	public override void _Process(double delta)
 	{
+		// Delete the Area3D detection later 
 		if (Area3d.isPlayerInside == true)
 		{
 			Current = false;
